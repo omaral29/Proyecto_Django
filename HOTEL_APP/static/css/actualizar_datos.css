@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond ;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color:black;
+  }
+  form {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(50,64,77,.90);
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: initial;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    width: 91%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(50, 64, 77, 0.9);
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #ffc107;
+  }
+  input[type="submit"] {
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    background-color: #83a6c38c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  input[type="submit"]:hover {
+    background-color: #ff9800;
+  }
+  select{
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    background-color: #83a6c38c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  option{
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    background-color: #83a6c38c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }

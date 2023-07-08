@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      .navbar{
+        background-color:#38598b;
+      }
+      .navbar a{
+        color:black;
+        
+      }
+      .navbar{
+        background-color:blanchedalmond;
+      }
+    </style>
+    <title>Usuarios</title>
+</head>
+<nav class="navbar navbar-expand-lg relative-top">
+      <div class="container">
+      <a class="navbar-brand" href="/index">RoyalPalm</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="administrador.html" id="Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/crudusers" id="Usuarios">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/habitacionescrud" id="Usuarios">Habitaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/crudtipos" id="Usuarios">Tipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout/" id="aC">Cerrar Sesion</a>
+          </li>
+        
+        </ul>
+      </div>
+     </div>
+    </nav>
+    <div class="container">
+    <div class="col-6 justify-content-center"">
+    <tr>
+      <br>
+            <td> <a href="/reporteusuario/" class="btn btn-info" >Reporte Usuarios</a></td>
+            <br>
+            <br>
+            <td> <a href="/reportehabitaciones/" class="btn btn-info" >Reporte Habitaciones</a>  </td>
+            <br>
+            <br>
+            <td> <a href="/reportepagos/" class="btn btn-info" >Reporte de Pagos</a>  </td>
+            <br>
+            <br>
+            <td> <a href="/ads1/" class="btn btn-info" >Habitaciones con mayor reservacion</a>  </td>
+            <br>
+            <br>
+            <td > <a href="/ads2/" class="btn btn-info" >reservas por fechas</a>  </td> 
+            <br>
+            <br>
+            <td > <a href="/ads3/" class="btn btn-info" >promedio de edades</a>  </td>     
+            <br>
+            <br>
+           
+      
+    </tr>
+</div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>

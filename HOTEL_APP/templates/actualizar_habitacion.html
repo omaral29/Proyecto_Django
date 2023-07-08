@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href='{% static "css/actualizar_datos.css" %}'>
+ 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      nav{
+        background-color: aliceblue;
+  
+      }
+      a{
+        color:Black
+  
+      }
+     </style>
+      <title>Registro</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg relative-top">
+        <div class="container">
+        <a class="navbar-brand" href="#">RoyalPalm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/habitacionescrud/" id="Inicio">Habitaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/reportes/" id="Reportes">Reportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout/" id="aC">Cerrar Sesion</a>
+            </li>
+          
+          </ul>
+        </div>
+       </div>
+      </nav>
+    <h1>Actualizar Datos</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="cedula">Numero de Habitacion</label>
+      <input type="number" id="num_habitacion" name="num_habitacion" value="{{habitacion.0}}" readonly required  min="0"/>
+
+      <label for="nombre">Precio de Habitacion</label>
+      <input type="text" id="precio" value="{{habitacion.1}}" name="precio" required />
+
+      <label for="apellido">Tipo de Habitacion</label>
+
+      <div class="">
+        <select class="">
+            <option value="" disabled="" selected="">Tipo de Habitacion</option>
+            {% for x in tipo%}
+            <option value="{{x.0}}">{{x.0}}</option>
+            {% endfor %}
+        </select>
+        
+        <input type="hidden" id="tipoin" value="" name="tipoin">
+
+      <input type="submit" value="Actualizar" />
+    </form>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</html>

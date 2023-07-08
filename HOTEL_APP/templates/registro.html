@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href='{% static "css/registro3.css" %}'>
+    <link rel="stylesheet" href='{% static "css/index1.css"%}'>
+    <title>Registro</title>
+  </head>
+  <body>
+    <nav class="top-registro">
+      <ul>
+        <li><a href="/index">Inicio</a></li>
+         <li><a href="/login/">Iniciar Sesion</a></li>
+         <li><img src='{% static "imagen/hotel.png"%}' alt="" srcset=""></li>
+         <li><a href="#">Youtube</a></li>
+         <li><a href="#">Contacto</a></li>
+      </ul>
+ </nav>
+    <h1>Registro</h1>
+
+    <form method="post">
+      <h1> {{show}} </h1>
+      {% csrf_token %}
+      <label for="cedula">Cedula</label>
+      <input type="number" id="cedula" name="cedula" required  min="0"/>
+
+      <label for="nombre">Nombre </label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="apellido">Apellido </label>
+      <input type="text" id="apellido" name="apellido" required />
+
+      <label for="">Fecha de nacimiento</label>
+      <input type="date" name="nombre" id="nombre"><br>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefono">Telefono </label>
+      <input type="number" id="telefono" name="telefono" required  min="0"/>
+      
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required />
+
+      <input type="submit" value="Registrarse" />
+    </form>
+  </body>
+</html>

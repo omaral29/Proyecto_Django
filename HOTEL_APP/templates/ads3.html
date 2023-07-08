@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      .navbar{
+        background-color:#38598b;
+      }
+      .navbar a{
+        color:black;
+        
+      }
+      .navbar{
+        background-color:blanchedalmond;
+      }
+    </style>
+    <title>Usuarios</title>
+</head>
+<nav class="navbar navbar-expand-lg relative-top">
+      <div class="container">
+      <a class="navbar-brand" href="/index">Royal Palm</a> <br>
+
+     </div>
+    </nav>
+    <br>
+<div class="container-fluid">
+  <table class="table table-striped text-center">
+    <label for="">desde: </label>
+    <input type="date" name="" id="">
+    <label for="">hasta:</label>
+    <input type="date" name="" id="">
+  <thead>
+    <tr>
+      
+      <th>numero de habitacion</th>
+      <th>tipo de habitacion </th>
+      <th>promedio de edad</th>
+      
+        
+
+    </tr> 
+  </thead>
+  <tbody id="Contenido">
+    <tr>
+      
+            <td>50</td>
+            <td>basica</td>
+            <td>40</td>
+            
+           
+      
+    </tr>
+    <tr>
+      
+        <td>45</td>
+        <td>premiun</td>
+        <td>20</td>
+        
+       
+  
+</tr>
+    
+     </tbody>
+  </table>
+  <a href="" class="btn btn-danger" >imprimir </a>
+  <a href="/pdf2/" class="btn btn-danger" >guardar pdf</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>

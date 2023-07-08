@@ -1,0 +1,77 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles30.css' %}">
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      .navbar{
+        background-color:#38598b;
+      }
+      .navbar a{
+        color:black;
+        
+      }
+      .navbar{
+        background-color:blanchedalmond;
+      }
+    </style>
+    <title>Reservas</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#!">RoyalPalm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li class="nav-item"><a class="nav-link" href="/menu/">Home</a></li>
+              <li class="nav-item dropdown">
+              </li>
+          </ul>
+          <form class="d-flex">
+              <button class="btn btn-outline-dark" type="submit">
+                  <i class="bi-person-circle"></i>
+                  {{show}} 
+              </button>
+          </form>
+      </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <h1 class="text-center">Reservas</h1>
+  <table class="table table-striped text-center">
+  <thead>
+    <tr>
+ 
+    <th>ID-Reserva</th>  
+    <th>Fecha de entrada</th>
+      <th>Fecha de salida</th>
+      <th>Numero de Referencia</th>
+      <th>Numero de Habitacion</th>
+    
+    </tr> 
+  </thead>
+  <tbody id="Contenido">
+    <tr>
+      {% for y in x%}
+            <td>{{y.0}}</td>
+            <td>{{y.1}}</td>   
+            <td>{{y.2}}</td>  
+            <td>{{y.3}}</td>
+            <td>{{y.4}}</td>  
+            
+        
+    </tr>
+    {% endfor %}
+</tbody>
+  </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>

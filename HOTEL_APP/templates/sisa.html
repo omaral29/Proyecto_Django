@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Inicio de sesión</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <!-- <script src="js/sweet-alert.min.js"></script> -->
+    <link rel="stylesheet" href='{% static "css/sweet-alert.css" %}'>
+    <link rel="stylesheet" href='{% static "css/material-design-iconic-font.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/normalize.css" %}'>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jquerymCustomScrollbar.css" %}'>
+    <link rel="stylesheet" href='{% static "css/style2.css" %}'>
+    <link rel="stylesheet" href='{% static "css/login1.css" %}'>
+    <link rel="stylesheet" href='{% static "css/index1.css"%}'>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script> -->
+    <!-- <script src="js/modernizr.js"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+</head>
+<nav class="top-login">
+    <ul>
+       <li><a href="/index">Inicio</a></li>
+       <li><a href="/registro/">Registrarte</a></li>
+       <li><img src='{% static "imagen/hotel.png"%}' alt="" srcset=""></li>
+       <li><a href="#">Youtube</a></li>
+       <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+<body class="full-cover-background" >
+    <div class="form-container">
+        <p class="text-center" style="margin-top: 17px;">
+           <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
+       </p>
+       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión con tu cuenta</h4>
+       <form method="post">
+        <h2> {{show}} </h2>
+        {% csrf_token %}
+            <div class="group-material-login">
+              <input name="cedula" type="text" class="material-login-control" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-account"></i> &nbsp; Usuario</label>
+            </div><br>
+            <div class="group-material-login">
+              <input name="clave" type="password" class="material-login-control" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</label>
+            </div>
+            <div class="group-material">
+                <select class="material-control-login" id="Select">
+                    <option value="" disabled="" selected="">Tipo de usuario</option>
+                    <option value="Usuario">Usuario</option>
+                    <option value="Administrador">Administrador</option>
+            
+                </select>
+                <input type="hidden" value="Usuario" class="Oculto" id="Oculto" name="Oculto">
+            </div>
+            <button class="btn-login" type="submit">Ingresar al sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
+            
+        </form>
+    </div> 
+</body>
+<script>
+    const selectElement = document.getElementById("Select");
+    const Oculto=document.getElementById("Oculto")
+selectElement.addEventListener('change', (event) => {
+    Oculto.value=selectElement.value
+    alert(Oculto.value)
+});
+</script>
+</html>

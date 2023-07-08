@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      .navbar{
+        background-color:#38598b;
+      }
+      .navbar a{
+        color:black;
+        
+      }
+      .navbar{
+        background-color:blanchedalmond;
+      }
+    </style>
+    <title>Usuarios</title>
+</head>
+<nav class="navbar navbar-expand-lg relative-top">
+      <div class="container">
+      <a class="navbar-brand" href="/index">Royal Palm</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="crudtipos" id="Inicio">Tipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/habitacionescrud" id="Usuarios">Habitaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reportes/" id="Reportes">Reportes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout/" id="aC">Cerrar Sesion</a>
+          </li>
+        
+        </ul>
+      </div>
+     </div>
+    </nav>
+    
+    <div class="container">
+      <h1 class="text-center">CRUD USUARIOS</h1>
+    <div class="col-6 justify-content-center"">
+    <form action="" method="POST" id="Formulario" name="Registro" >
+    
+    <label style="width:100%;">Registro</label>
+    <input type="hidden" class="form-control" name="Codigo" placeholder="Codigo" id="Codigo">
+    <input type="number" class="form-control Name" style="margin-top:5px;" name="cedula" placeholder="Cedula" id="cedula">
+    <input type="text" class="form-control Name" style="margin-top:5px;" name="nombre" placeholder="Nombre" id="nombre">
+    <input type="text" class="form-control Name" style="margin-top:5px;" name="apellido" placeholder="Apellido" id="apellido">
+    <input type="mail" class="form-control"style="margin-top:5px;" name="correo" placeholder="Correo " id="correo">
+    <input type="password" class="form-control" style="margin-top:5px;"name="clave" placeholder="Clave" id="clave">
+    <td class="btn btn-info" > {{show}} </td>
+    <input type="submit" name="Accion" class="btn btn-success" style="margin-top:10px;" value="Registrar">
+    <input type="reset" class="btn btn-light" style="margin-top:10px;" name="Limpiar" value="Limpiar">
+    </form>
+</div>
+  </div>
+<div class="container-fluid">
+  <table class="table table-striped text-center">
+  <thead>
+    <tr>
+    <th>Cedula</th>  
+    <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Fecha de nacimiento</th>
+      <th>Correo</th>
+      <th>Clave</th>
+      <th>Rol</th>
+      <th colspan="2">Acciones</th>
+    </tr> 
+  </thead>
+  <tbody id="Contenido">
+    <tr>          
+            <td>29831425</td>
+            <td>wilfred</td>
+            <td>silva</td>   
+            <td>25/01/2002</td>  
+            <td>wuilfredjavier@gmail.com</td>
+            <td>usuario</td>
+            <td> <a href="/eliminarusuario/" class="btn btn-danger" >Eliminar </a></td>
+            <td> <a href="/actualizarusuario/" class="btn btn-info" >Actualizar</a>  </td>
+            <td > </td>   
+           
+      
+    </tr>
+    
+     </tbody>
+  </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>

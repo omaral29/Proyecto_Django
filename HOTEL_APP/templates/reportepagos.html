@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '4.2/css/bootstrap.min.css' %} ">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+      .navbar{
+        background-color:#38598b;
+      }
+      .navbar a{
+        color:black;
+        
+      }
+      .navbar{
+        background-color:blanchedalmond;
+      }
+    </style>
+    <title>Usuarios</title>
+</head>
+<nav class="navbar navbar-expand-lg relative-top">
+      <div class="container">
+      <a class="navbar-brand" href="/index">Royal Palm</a> <br>
+
+     </div>
+    </nav>
+    <br>
+<div class="container-fluid">
+  <table class="table table-striped text-center">
+    <h1 class="text-center">Reporte Pagos</h1>
+  <thead>
+    <tr>
+    <th>Numero de Referencia</th>  
+    <th>Banco</th>
+      <th>Metodo de Pago</th>
+      <th>Fecha de Pago</th>
+      <th>Cedula Cliente</th>
+    </tr> 
+  </thead>
+  <tbody id="Contenido">
+    <tr>
+      {% for y in x%}
+          
+            <td>{{y.0}}</td>
+            <td>{{y.1}}</td>
+            <td>{{y.2}}</td>   
+            <td>{{y.3}}</td>  
+            <td>{{y.4}}</td>
+            <td>{{y.5}}</td>
+            <td > </td>   
+           
+      
+    </tr>
+    {% endfor %}
+     </tbody>
+  </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>
